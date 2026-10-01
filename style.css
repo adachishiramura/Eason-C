@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
 html,body,main{
     margin: 0;
     padding: 0;
@@ -297,8 +299,10 @@ html::-webkit-scrollbar {
 
 /*legacy section*/
 #legacy{
+    padding-left: 20px;
     background-color: #0D111A;
     display: flow-root;
+    padding-bottom: 20px;
 
 }
 #legacy-title{
@@ -493,6 +497,121 @@ html::-webkit-scrollbar {
     display: auto; 
 } 
 
+#disco{
+    padding-left: 20px;
+    padding-top: 30px;
+    background-color: #05070b;
+    display: flow-root;
+}
+#disco-section{
+    font-family: "JetBrains Mono", monospace;
+    color: goldenrod;
+    font-size: 12px;
+    margin: 5px;
+    font-weight: 800;
+}
+.disco-title-name h1{
+    margin: 0px;
+    font-family: "roboto","sans series";
+    color: white;
+    font-size: 40px;
+}
+
+#disco-title-description{
+    margin-top: 5px;
+    font-family: "roboto","sans series";
+    color: #8593b0;
+    font-size: 14px;
+}
+
+
+/*I used W3school code and reedited the css myself*/
+.disco-info{
+    overflow: hidden;
+}
+
+.filterDiv {
+    float: left;
+    background-color: rgba(82, 113, 181, 0.3);
+    width: 30vw;
+    height: auto;
+    line-height: normal;
+    text-align: left;
+    margin: 2px;
+    padding: 14px 16px;
+    box-sizing: border-box;
+    display: none; 
+    border: rgba(82, 113, 181, 0.7) solid 1px;
+    border-radius: 30px;
+}
+
+.filterDiv h3{
+    color: #ffffff;
+    margin: 12px 0 0;
+}
+
+.disco-info-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+.disco-info-top p{
+    margin: 0;
+}
+
+.disco-info-label{
+    color: rgba(218,165,32,1);
+    background: rgba(218,165,32,0.3);
+    border: goldenrod solid 1px;
+    display: block;
+    box-sizing: border-box;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-size: 10px;
+    line-height: 1.2;
+    text-align: center;
+}
+.show {
+  display: block;
+}
+
+.btn {
+    padding: 6px 8px;
+    cursor: pointer;
+    background-color: rgba(82, 113,181, 0.3);
+    border:#5271b5 solid 1px;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 700;
+    font-size: 12px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: rgb(245,245,245);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+    color: white;
+    opacity: 1;
+}
+
+.btn.active {
+    opacity: 1;
+    background-color: goldenrod;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -522,32 +641,32 @@ html::-webkit-scrollbar {
 
 /* Center Paper Label 中间红碟盘*/
 .record-label {
-  position: relative;
-  z-index: 2;
-  width: 50%;
-  aspect-ratio: 1;
-  background: rgba(0,0,128,0.3); /* Vibrant DJ label color */
-  border-radius: 50%;
-  border: 0.2vmin solid #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: inset 0 0 1vw rgba(0,0,0,0.3);
-  border: goldenrod ridge 2px;
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    aspect-ratio: 1;
+    background: rgba(0,0,128,0.3); /* Vibrant DJ label color */
+    border-radius: 50%;
+    border: 0.2vmin solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 1vw rgba(0,0,0,0.3);
+    border: goldenrod ridge 2px;
 }
 
 /* Center Spindle Hole 中心黑色洞*/
 .spindle-hole {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  width: 7%;
-  aspect-ratio: 1;
-  background: #1a1a1a;
-  border-radius: 50%;
-  box-shadow: inset 0 0.25vh 0.6vh rgba(0,0,0,0.8), 0 0.1vh 0.1vh rgba(255,255,255,0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 7%;
+    aspect-ratio: 1;
+    background: #1a1a1a;
+    border-radius: 50%;
+    box-shadow: inset 0 0.25vh 0.6vh rgba(0,0,0,0.8), 0 0.1vh 0.1vh rgba(255,255,255,0.2);
 }
 
 .dj-copy {
