@@ -1,6 +1,15 @@
-html,body{
+html,body,main{
     margin: 0;
     padding: 0;
+}
+
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 .banner{
@@ -87,3 +96,295 @@ html,body{
 #recommender ::after{
     background-color: #f0e21f;
 }
+
+/*home section*/
+
+.home-background{
+    padding: 50px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    box-sizing: border-box;
+
+    position: relative;
+    flex-direction: column;
+}
+
+.iridescent-bg {
+  background-color: #050505;
+  background-image: 
+    linear-gradient(120deg, rgba(0, 255, 200, 0.15), transparent 50%),
+    linear-gradient(240deg, rgba(255, 0, 128, 0.15), transparent 50%),
+    linear-gradient(360deg, rgba(100, 50, 255, 0.15), transparent 50%);
+  background-size: 200% 200%;
+  animation: iridescent-shift 10s ease infinite;
+}
+
+@keyframes iridescent-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.home-label{
+    display: flex;
+    color: white;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
+    position: relative;
+    box-sizing: border-box;
+
+    padding: 7px;
+    border-radius: 20px;
+    size: 40%;
+}
+#label-1{
+    background-color: rgba(240, 226, 31, 0.3);
+    border: #f0e21f solid 1px;
+}
+#label-2{
+    background-color: rgba(56, 39, 245, 0.3);
+    border: #796fee ridge 1px;
+}
+.home-label i{
+    color: goldenrod;
+}
+.home-label p{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    
+    
+}
+#gold{
+    color: goldenrod;
+    font-weight: 600;
+    font-size: 13px;
+}
+#blue{
+    color: rgb(216, 232, 237);
+    font-weight: 300;
+    font-size: 10px;
+}
+#top-label{
+    display: flex;/*compulsory*/
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+    box-sizing: border-box;
+    gap: 15px;
+}
+#home-text{
+    font-family: "Lato", sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    padding: 0px;
+    margin: 0;
+}
+#home-text h1{
+    color: unset;
+    gap: 0px;
+    margin: 0px;
+}
+#home-description{
+    font-family: "Roboto", sans-serif;
+    color: #d8e8ed;
+    font-size: 20px;
+    font-weight: 1;
+}
+.home-middle-layer{
+    display: flex;/*compulsory*/
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#dj-title{
+    font-family: "Roboto", sans-serif;
+    color: goldenrod;
+    font-size: min(1.4vw, 2.2vh);
+    white-space: nowrap;
+    margin: 0;
+}
+#dj-text{
+    font-family: "Roboto", sans-serif;
+    font-size: min(2.4vw, 3.2vh);
+    color: white;
+    white-space: nowrap;
+    margin: 0;
+}
+
+#home-achievements{
+    display: flex;/*compulsory*/
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+    box-sizing: border-box;
+    gap: 15px;
+    font-family: "Roboto", sans-serif;
+}
+#home-achievements h2{
+    font-size: 32px;
+    padding-top: 10px;
+    margin: 0;
+}
+#home-achievements p{
+    color: #a9b7bb;
+    margin:0;
+}
+.home-buttons{
+    display: flex;/*compulsory*/
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+    box-sizing: border-box;
+    gap: 15px;
+    font-family: "Roboto", sans-serif;
+}
+
+.home-buttons a{
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+#home-song{
+    background: linear-gradient(90deg,#ffd700,#da9820);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 1s;
+    border: white solid 1px;
+}
+#home-song:hover{
+    transform: scale(1.2);
+}
+#home-song a{
+    color: black;
+    
+}
+
+#home-tour{
+    background-color: rgba(71, 121, 196, 0.3);
+    border: white solid  1px;
+    padding: 20px;
+    border-radius: 10px;
+}
+#home-tour i{
+    color: #da9820;
+}
+#home-tour a{
+    color: white;
+    opacity: 1;
+}
+#home-tour:hover{
+    border: #da9820 solid 1px;
+}
+
+#home-tour a:hover{
+    color: #da9820;
+    
+}
+
+
+/*legacy section*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*I used web resources for this part(mainly because I haven't learnt this yet)(I also did modify a bit by myself)*/
+/* The Vinyl Record Plate 光盘底盘*/
+.vinyl-plate {
+  position: absolute;
+  right: 2vw;
+  top: -8vh;
+  width: min(40vw, 55vh);
+  aspect-ratio: 1;
+  background: #0d0d0d;
+  border-radius: 50%;
+  box-shadow: 0 1vh 2vw rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  
+  
+  /* Triggers the spinning animation */
+  animation: spin 15s linear infinite;
+}
+
+/* Center Paper Label 中间红碟盘*/
+.record-label {
+  position: relative;
+  z-index: 2;
+  width: 50%;
+  aspect-ratio: 1;
+  background: rgba(0,0,128,0.3); /* Vibrant DJ label color */
+  border-radius: 50%;
+  border: 0.2vmin solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 1vw rgba(0,0,0,0.3);
+  border: goldenrod ridge 2px;
+}
+
+/* Center Spindle Hole 中心黑色洞*/
+.spindle-hole {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 7%;
+  aspect-ratio: 1;
+  background: #1a1a1a;
+  border-radius: 50%;
+  box-shadow: inset 0 0.25vh 0.6vh rgba(0,0,0,0.8), 0 0.1vh 0.1vh rgba(255,255,255,0.2);
+}
+
+.dj-copy {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+@media (max-width: 700px), (max-height: 500px) {
+  .home-middle-layer > div:last-child {
+    display: none;
+  }
+}
+
+
+/* Rotation Animation 转动动画*/
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
