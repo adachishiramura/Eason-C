@@ -100,7 +100,8 @@ html::-webkit-scrollbar {
 /*home section*/
 
 .home-background{
-    padding: 50px;
+    padding-left: 30px;
+    padding-top: 50px;
     width: 100%;
     height: auto;
     display: flex;
@@ -295,18 +296,202 @@ html::-webkit-scrollbar {
 
 
 /*legacy section*/
+#legacy{
+    background-color: #0D111A;
+    display: flow-root;
 
+}
+#legacy-title{
+    text-align: center;
+    color: white;
+    padding: 80px;
+    gap: 0;
+}
+#legacy-title p,
+#legacy-title h1{
+    font-family: "Roboto", sans-serif;
 
+}
+#legacy-title p{
+    color: goldenrod;
+    font: 10px;
+    margin: 0 0 4px;/*让两者间距变小*/
+}
+#legacy-title h1{
+    color: white;
+    font-size: 48px;
+    margin: 0;/*让两者间距变小*/
+    font-weight: 600;
+    height: 90%;
+    
+}
+#legacy-underline{
+    text-decoration-line: underline;
+    /*text-decoration-style: double;*/
+    text-decoration-color: goldenrod;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 40px; 
+}
+#legacy-main{
+    display: flex;/*compulsory*/
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+    box-sizing: border-box;
+    gap: 4vw;
 
+}
 
+#legacy-comment{
+    position: relative;
+    width: min(42vw, 520px);
+    aspect-ratio: 407 / 495;
+    box-sizing: border-box;
+    padding: 10px;
+    border: #1f2a42 solid 3px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #0d111a;
+    background-image: linear-gradient(to top, rgba(0, 108, 162, 0.85)0%, rgba(0, 0, 0, 0)40%) , url("image/images.jpg");
+    background-size: cover;
+    background-position: center, center;
+    background-repeat: no-repeat;
+}
+#legacy-comment img{
+    border-radius: 10px;
+    position:relative;
+}
+#legacy-comment-background{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 108, 162, 0.35), rgba(0, 0, 0, 0.2));
+    pointer-events: none;
+}
+#legacy-comment-label{
+    background: rgba(218,165,32, 0.2);
+    border: goldenrod solid 1px;
+    color: goldenrod;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    margin: 0;
+    padding: 20px 10px;
+    bottom: 110px;
+    left: 20px;
+    font-size: 10px;
+    padding: 4px 6px;
+    z-index: 1;
+    
+}
+#legacy-comment-header{
+    position: absolute;
+    color: #FFFFFF;
+    bottom: 28px;
+    left: 20px;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    z-index: 1;
+}
+#legacy-comment-label p{
+    margin: 0;
+}
+#legacy-comment-text{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    left: 1.8vw;
+}
 
+#legacy-description{
+    color:#D1D5DB;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.3vw;
+    margin: 10px;
+    line-height: 2vw;
+    padding: 2px 10px;
+    
+    background-color: rgba(82, 113,181, 0.3);
+    border:#5271b5 solid 2px;
+    border-radius: 5px;
+    max-inline-size: 65ch;
+}
 
+.award-box{
+    background-color: rgba(82, 113,181, 0.3);
+    border:#5271b5 solid 1px;
+    font-family: "Roboto", sans-serif;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 24.5vw;
+    height: 25vh;
+    padding: 2px;
+    max-inline-size: 50ch;
+}
 
+.award-box i{
+    padding: 10px 10px 0px 10px;
+    font-size: 2vw;
+    height: auto;
+}
+.award-box h5{
+    color: white;
+    font-size: 14px;
+    padding: 0px 0px 0px 8px;
+    margin: 15px 0px 8px;
+}
+.award-box p{
+    color: #D1D5DB;
+    font-size: 12px;
+    padding: 0px 0px 0px 8px;
+    margin: 0px;
+}
+#award-top-left i{
+    color: goldenrod;
+}
+#award-top-right i{
+    color: cyan;
+}
+#award-bottom-left i{
+    color: orchid;
+}
+#award-bottom-right i{
+    color: pink;
+}
+#award-left{
+    display: flex;
+    flex-direction: column;/*changes the direction alignment of the texts*/
+    justify-content: center;
+    align-items: stretch;
+    gap: 5px;
+}
+#award-right{
+    display: flex;
+    flex-direction: column;/*changes the direction alignment of the texts*/
+    justify-content: center;
+    align-items: stretch;
+    gap: 5px;
+}
 
+#legacy-award{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 10px;
+    margin: 10px;
+}
+#legacy-award > div{
+    flex: 1;
+}
 
-
-
-
+#legacy-right{
+    display: auto; 
+} 
 
 
 
@@ -376,7 +561,6 @@ html::-webkit-scrollbar {
     display: none;
   }
 }
-
 
 /* Rotation Animation 转动动画*/
 @keyframes spin {
