@@ -1,31 +1,40 @@
-<script src="test.js"></script>
-<link rel="stylesheet" href="test.css">
-
-<!-- Control buttons -->
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('cars')"> Cars</button>
-  <button class="btn" onclick="filterSelection('animals')"> Animals</button>
-  <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
-  <button class="btn" onclick="filterSelection('colors')"> Colors</button>
+<div class="filterDiv "><!--filterDiv-->>
+    <div class="disco-info-top">
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <p class="disco-info-label"></p><!--p-->
+        </div>
+        <p style="color: rgba(240,248,255,0.4);font-family: 'JetBrains Mono',' monospace;font-size: 10px;'"></p><!--p-->
+    </div>
+    <h3></h3><!--h3-->
+    <h5 class="disco-info-album"></h5><!--h5-->
+    <p class="disco-info-album-info"></p><!--p-->
+    <hr style="opacity: 0.1;">
+    <div style="padding-bottom: 3vh;"></div>
+    <div class="disco-function">
+        <div class="disco-lyric" id="lyric-link">
+            <button class="see-description-btn" type="button" data-album=""><!--data-album-->
+                <i class="fa-solid fa-book-open"></i>
+                <p>Lyrics</p>
+            </button>
+        </div>
+        <div class="disco-play">
+            <i class="fa-solid fa-circle-play"></i>
+            <p>Play Track</p>
+        </div>
+    </div>
 </div>
 
-<!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
-<div class="container">
-  <div class="filterDiv cars">BMW</div>
-  <div class="filterDiv colors fruits">Orange</div>
-  <div class="filterDiv cars">Volvo</div>
-  <div class="filterDiv colors">Red</div>
-  <div class="filterDiv cars">Ford</div>
-  <div class="filterDiv colors">Blue</div>
-  <div class="filterDiv animals">Cat</div>
-  <div class="filterDiv animals">Dog</div>
-  <div class="filterDiv fruits">Melon</div>
-  <div class="filterDiv fruits animals">Kiwi</div>
-  <div class="filterDiv fruits">Banana</div>
-  <div class="filterDiv fruits">Lemon</div>
-  <div class="filterDiv animals">Cow</div>
-</div>
+<div style="padding-right: 11vw;"></div>
+<a href="" target="_blank" rel="noopener noreferrer"><!--href-->
+    <button class="disco-play" type="button" data-track=""><!--data-track-->
+        <i class="fa-solid fa-circle-play"></i>
+        <p>Play Track</p>
+    </button>
+</a>
+
+
+
+
 
 
 

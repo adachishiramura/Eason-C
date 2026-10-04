@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+CA+Guides:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     
@@ -178,38 +178,343 @@
                     <h1>DISCOVER MASTERPIECES</h1>
                     <p id="disco-title-description">Explore hit Cantonese albums, Mandarin classics, and cinema soundization</p>
                 </div>
-                <div class="disco-title-button">
-                    <button class="btn active" onclick="filterSelection('all')">ALL</button>
-                    <button class="btn " onclick="filterSelection('cantonese')">CANTONESE</button>
-                    <button class="btn " onclick="filterSelection('mandarin')">MANDARIN</button>
-                    <button class="btn " onclick="filterSelection('theme')">THEMES & OST</button>
+                <div style="padding-right: 30   vw;"></div>
+                <div>
+                    <div style="padding-bottom: 10vh;"></div>
+                    <div class="disco-title-button">
+                        <button class="btn active" type="button" data-filter="all">ALL</button>
+                        <button class="btn" type="button" data-filter="cantonese">CANTONESE</button>
+                        <button class="btn" type="button" data-filter="mandarin">MANDARIN</button>
+                        <button class="btn" type="button" data-filter="theme">THEMES & OST</button>
+                    </div>
                 </div>
-
+                
             </div>
             <div class="disco-info">
-                <div class="filterDiv cantonese">
+                <div class="filterDiv cantonese show">
                     <div class="disco-info-top">
-                        <p class="disco-info-label">CANTONESE MASTERPIECE</p>
-                        <p>2000</p>
+                        <div style="display: flex; align-items: center; gap: 0px;">
+                            <p class="disco-info-label">CANTONESE MASTERPIECE</p>
+                        </div>
+                        <p style="color: rgba(240,248,255,0.4);font-family: 'JetBrains Mono',' monospace;font-size: 10px;'">2000</p>
                     </div>
                     <h3>K歌之王(King of Karaoke)</h3>
+                    <h5 class="disco-info-album">打得火热 (2000)</h5>
+                    <p class="disco-info-album-info">Cleverly weaves 65 classic Cantonese song titles into a heart-wrenching karaoke anthem.</p>
+                    <hr style="opacity: 0.1;">
+                    <div class="disco-function">
+                        <div class="disco-lyric lyric-link">
+                            <button class="see-description-btn" type="button" data-album="king-of-karaoke">
+                                <i class="fa-solid fa-book-open"></i>
+                                <p>Lyrics</p>
+                            </button>
+                        </div>
+                        <div style="padding-right: 11vw;"></div>
+                        <a href="https://www.youtube.com/watch?v=Sm_DVsixxsk&list=RDSm_DVsixxsk&start_radio=1" target="_blank" rel="noopener noreferrer">
+                            <button class="disco-play" type="button" data-track="king-of-karaoke">
+                                <i class="fa-solid fa-circle-play"></i>
+                                <p>Play Track</p>
+                            </button>
+                        </a>
+                        
+                    </div>
                 </div>
-                <div class="filterDiv cantonese">
-                    <h3>富士山下(Under Mount Fuji)</h3>
+                <div class="filterDiv cantonese show">
+                    <div class="disco-info-top">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <p class="disco-info-label">TIME MAGAZINE ESSENTIAL</p>
+                        </div>
+                        <p style="color: rgba(240,248,255,0.4);font-family: 'JetBrains Mono',' monospace;font-size: 10px;'">2005</p><!--p-->
+                    </div>
+                    <h3>富士山下 (Under Mount Fuji)</h3><!--h3-->
+                    <h5 class="disco-info-album">U87 (2005)</h5><!--h5-->
+                    <p class="disco-info-album-info">A poetic masterpiece using Mount Fuji as a metaphor for letting go of unrequited grief.</p><!--p-->
+                    <hr style="opacity: 0.1;">
+                    <div style="padding-bottom: 3vh;"></div>
+                    <div class="disco-function">
+                        <div class="disco-lyric lyric-link">
+                            <button class="see-description-btn" type="button" data-album="under-mount-fuji"><!--data-album-->
+                                <i class="fa-solid fa-book-open"></i>
+                                <p>Lyrics</p>
+                            </button>
+                        </div>
+                        <div style="padding-right: 11vw;"></div>
+                        <a href="https://www.youtube.com/watch?v=ghnT1uOwfrY&list=RDghnT1uOwfrY&start_radio=1" target="_blank" rel="noopener noreferrer"><!--href-->
+                            <button class="disco-play" type="button" data-track="under-mount-fuji"><!--data-track-->
+                                <i class="fa-solid fa-circle-play"></i>
+                                <p>Play Track</p>
+                            </button>
+                        </a>
+                    </div>
                 </div>
-
-
-                <div class="filterDiv cantonese"><h3>浮夸(Exaggerated)</h3></div>
-                <div class="filterDiv mandarin"><h3>十年(ten years)</h3></div>
-                <div class="filterDiv theme"><h3>孤勇者(Warrior of Darkness)</h3></div>
-                <div class="filterDiv cantonese"><h3>陀飞轮(Tourbillon)</h3></div>
+                <div class="filterDiv cantonese show">
+                    <div class="disco-info-top">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <p class="disco-info-label">VOCAL TOUR-DE-FRANCE</p><!--p-->
+                        </div>
+                        <p style="color: rgba(240,248,255,0.4);font-family: 'JetBrains Mono',' monospace;font-size: 10px;'">2005</p><!--p-->
+                    </div>
+                    <h3>浮誇 (Exaggerated)</h3><!--h3-->
+                    <h5 class="disco-info-album">U87 (2005)</h5><!--h5-->
+                    <p class="disco-info-album-info">An explosive, theatrical anthem about an ordinary soul putting on a dramatic facade to be noticed.</p><!--p-->
+                    <hr style="opacity: 0.1;">
+                    <div style="padding-bottom: 3vh;"></div>
+                    <div class="disco-function">
+                        <div class="disco-lyric lyric-link">
+                            <button class="see-description-btn" type="button" data-album="exaggerated"><!--data-album-->
+                                <i class="fa-solid fa-book-open"></i>
+                                <p>Lyrics</p>
+                            </button>
+                        </div>
+                        <div style="padding-right: 11vw;"></div>
+                        <a href="https://www.youtube.com/watch?v=0xFFGzZq75w" target="_blank" rel="noopener noreferrer"><!--href-->
+                            <button class="disco-play" type="button" data-track="exaggerated"><!--data-track-->
+                                <i class="fa-solid fa-circle-play"></i>
+                                <p>Play Track</p>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="filterDiv mandarin show">
+                    <div class="disco-info-top">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <p class="disco-info-label">RANDOPOP LEGEND</p><!--p-->
+                        </div>
+                        <p style="color: rgba(240,248,255,0.4);font-family: 'JetBrains Mono',' monospace;font-size: 10px;'">2003</p><!--p-->
+                    </div>
+                    <h3>十年(Ten Years  )</h3><!--h3-->
+                    <h5 class="disco-info-album">Special Thanks To... (2003)</h5><!--h5-->
+                    <p class="disco-info-album-info">The iconic Mandarin equivalent of '明年今日' that conquered Greater China's music charts.</p><!--p-->
+                    <hr style="opacity: 0.1;">
+                    <div style="padding-bottom: 3vh;"></div>
+                    <div class="disco-function">
+                        <div class="disco-lyric lyric-link">
+                            <button class="see-description-btn" type="button" data-album="ten-years"><!--data-album-->
+                                <i class="fa-solid fa-book-open"></i>
+                                <p>Lyrics</p>
+                            </button>
+                        </div>
+                        <div style="padding-right: 11vw;"></div>
+                        <a href="https://www.youtube.com/watch?v=JM9rx_hN1Ko&list=RDJM9rx_hN1Ko&start_radio=1" target="_blank" rel="noopener noreferrer"><!--href-->
+                            <button class="disco-play" type="button" data-track="ten-years"><!--data-track-->
+                                <i class="fa-solid fa-circle-play"></i>
+                                <p>Play Track</p>
+                            </button>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="filterDiv theme show">
+                    <div class="disco-info-top">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <p class="disco-info-label">1B+ GLOBAL STREAMS</p><!--p-->
+                        </div>
+                        <p style="color: rgba(240,248,255,0.4);font-family: 'JetBrains Mono',' monospace;font-size: 10px;'">2021</p><!--p-->
+                    </div>
+                    <h3>孤勇者 (Warrior of Darkness)</h3><!--h3-->
+                    <h5 class="disco-info-album">Arcane Official Theme (2021)</h5><!--h5-->
+                    <p class="disco-info-album-info">Global gaming theme for League of Legends Arcane celebrating unsung heroes fighting in secret.</p><!--p-->
+                    <hr style="opacity: 0.1;">
+                    <div style="padding-bottom: 3vh;"></div>
+                    <div class="disco-function">
+                        <div class="disco-lyric lyric-link">
+                            <button class="see-description-btn" type="button" data-album="warrior-of-darkness"><!--data-album-->
+                                <i class="fa-solid fa-book-open"></i>
+                                <p>Lyrics</p>
+                            </button>
+                        </div>
+                       <div style="padding-right: 11vw;"></div>
+                        <a href="https://www.youtube.com/watch?v=Hlp8XD0R5qo&list=RDHlp8XD0R5qo&start_radio=1" target="_blank" rel="noopener noreferrer"><!--href-->
+                            <button class="disco-play" type="button" data-track="warrior-of-darkness"><!--data-track-->
+                                <i class="fa-solid fa-circle-play"></i>
+                                <p>Play Track</p>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="filterDiv cantonese show">
+                    <div class="disco-info-top">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <p class="disco-info-label">PHILOSIPHICAL CLASSIC</p><!--p-->
+                        </div>
+                        <p style="color: rgba(240,248,255,0.4);font-family: 'JetBrains Mono',' monospace;font-size: 10px;'"></p><!--p-->
+                    </div>
+                    <h3>陀飛輪 (Tourbillon)</h3><!--h3-->
+                    <h5 class="disco-info-album">Time Flies (2010)</h5><!--h5-->
+                    <p class="disco-info-album-info">A deep critique on consumerism and time, contrasting luxury watches with unpurchasable youth.</p><!--p-->
+                    <hr style="opacity: 0.1;">
+                    <div style="padding-bottom: 3vh;"></div>
+                    <div class="disco-function">
+                        <div class="disco-lyric lyric-link">
+                            <button class="see-description-btn" type="button" data-album="tourbillon"><!--data-album-->
+                                <i class="fa-solid fa-book-open"></i>
+                                <p>Lyrics</p>
+                            </button>
+                        </div>
+                        <div style="padding-right: 11vw;"></div>
+                        <a href="https://www.youtube.com/watch?v=URUIcYDq3_I&list=RDURUIcYDq3_I&start_radio=1" target="_blank" rel="noopener noreferrer"><!--href-->
+                            <button class="disco-play" type="button" data-track="tourbillion"><!--data-track-->
+                                <i class="fa-solid fa-circle-play"></i>
+                                <p>Play Track</p>
+                            </button>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div><!--Explore music page-->
 
         <div></div><!--mood finder-->
-        <div></div><!--concerts-->
+
+        <div class="concert">
+            <div class="concert-title">
+                <p id="concert-sect">[ SECTION 04 // LIVE SPECTACLES ]</p>
+                <h1>LEGENDARY CONCERT TOURS</h1>
+                <p id="concert-desc">Exploring historic arena milestones, thematic stage art, and record-breaking shows</p>
+            </div>
+            <div style="padding-bottom: 20px;"></div>
+            <div class="concert-info">
+                <div class="concert-info-lists" id="concert-info-list-left">
+                    <div class="concert-info-div" id="top-left" style="display: flex;">
+                        <div style="padding-right: 1vw;"></div>
+                        <div>
+                            <p style="color: #c39953;" class="concert-info-div-title">FEAR AND DREAMS WORLD TOUR</p>
+                            <h1>Fear and Dreams</h1>
+                            <p class="concert-info-div-info">A cinematic, continuous narrative concert exploring human existential fears, resilience, and hope. Features a massive 71-meter widescreen stage backdrop and a no-talking continuous setlist.</p>
+                            <div class="concert-info-div-stat" style="font-family: 'roboto',sans-serif;font-size:12px;line-height: 1vh;">
+                                <div style="margin-left: 0.7vw;">
+                                    <div style="padding-bottom: 5px;"></div>
+                                    <p>TOTAL SHOWS</p>
+                                    <p style="color: white;">120+ World Cities</p>
+                                    <div style="padding-top: 5px;"></div>
+                                </div>
+                                <div style="padding-right: 20vw;"></div><!--space gap-->
+                                <div>
+                                    <div style="padding-bottom: 5px;"></div>
+                                    <p>KEY RECORD</p>
+                                    <p style="color: #c39953;">27 Nights at HK Coliseum</p>
+                                    <div style="padding-top: 5px;"></div>
+                                </div>
+                                <div style="padding-right: 0.7vw;"></div>
+                            </div>
+                            <div style="padding-bottom: 20px;padding-left: 1vw;"></div>
+                        </div> 
+                        <div style="padding-left: 1vw;"></div>
+                    </div>
+                    <div style="padding-bottom: 3vh;"></div>
+                    <div class="concert-info-div" id="bottom-left" style="display: flex;">
+                        <div style="padding-right: 1vw;"></div>
+                        <div>
+                            <p style="color: cyan;" class="concert-info-div-title">DUO WORLD TOUR (2010 - 2012)</p>
+                            <h1>DUO Eason Chan</h1>
+                            <p class="concert-info-div-info">Centered on the theme of duality—sanity vs eccentricity, softness vs explosion. Marked by his split-dyed hairstyle, steampunk clockwork stage, and historic London O2 Arena sell-out.</p>
+                            <div class="concert-info-div-stat" style="font-family: 'roboto',sans-serif;font-size:12px;line-height:1vh;">
+                                <div style="margin-left: 0.7vw;">
+                                    <div style="padding-bottom: 5px;"></div>
+                                    <p>LONDON O2 ARENA</p>
+                                    <p style="color: white;">Sold Out in 20 Mins</p>
+                                    <div style="padding-top: 5px;"></div>
+                                </div>
+                                <div style="padding-right: 20vw;"></div><!--space gap-->
+                                <div>
+                                    <div style="padding-bottom: 5px;"></div>
+                                    <p>LIVE ALBUM</p>
+                                    <p style="color: cyan;">4x Platinum Live Audio</p>
+                                    <div style="padding-top: 5px;"></div>
+                                </div>
+                                <div style="padding-right: 0.7vw;"></div>
+                            </div>
+                            <div style="padding-bottom: 20px;padding-left: 1vw;"></div>
+                            
+                        </div>
+                        <div style="padding-left: 1vw;"></div>
+                    </div>
+                    
+                        
+                    
+                </div>
+
+                <div style="padding-right: 10px;"></div>
+                <div class="concert-info-lists" id="concert-info-list-right">
+                    <div class="concert-info-div" id="top-right" style="display: flex;">
+                        <div style="padding-right: 1vw;"></div>
+                        <div>
+                            <p style="color: magenta;" class="concert-info-div-title">EASON'S LIFE / ANOTHER EASON'S LIFE (2013-2016)</p>
+                            <h1>Eason's Life Tour</h1>
+                            <p class="concert-info-div-info">A massive 135-show global campaign centered on celebrating life, memory, and the transient nature of time across North America, Europe, Australia, and Asia.</p>
+                            <div style="padding-bottom: 20px;"></div>
+                            <div class="concert-info-div-stat" style="font-family: 'roboto',sans-serif;font-size:12px;line-height: 1vh;">
+                                <div style="margin-left: 0.7vw;">
+                                    <div style="padding-bottom: 5px;"></div>
+                                    <p>BEIJING BIRD'S NEST</p>
+                                    <p style="color: white;">100,000 Audience Capacity</p>
+                                    <div style="padding-top: 5px;"></div>
+                                </div>
+                                <div style="padding-right: 20vw;"></div><!--space gap-->
+                                <div>
+                                    <div style="padding-bottom: 5px;"></div>
+                                    <p>TOTAL SHOWS</p>
+                                    <p style="color: magenta;">135 Performance Dates</p>
+                                    <div style="padding-top: 5px;"></div>
+                                </div>
+                                <div style="padding-right: 0.7vw;"></div>
+                            </div>
+                            <div style="padding-bottom: 20px;padding-left: 1vw;"></div>
+                        </div> 
+                        <div style="padding-left: 1vw;"></div>
+                    </div>
+                    <div style="padding-bottom: 3vh;"></div>
+                    <div class="concert-info-div" id="bottom-right" style="display: flex;">
+                        <div style="padding-right: 1vw;"></div>
+                        <div>
+                            <p style="color: pink;" class="concert-info-div-title">MOVING ON STAGE (2007 - 2009)</p>
+                            <h1>Moving On Stage</h1>
+                            <p class="concert-info-div-info">The groundbreaking world tour that firmly cemented Eason Chan's international stardom, featuring energetic dance medleys, theatrical costume designs, and raw acoustic solos.</p>
+                            <div class="concert-info-div-stat" style="font-family: 'roboto',sans-serif;font-size:12px;line-height:1vh;">
+                                <div style="margin-left: 0.7vw;">
+                                    <div style="padding-bottom: 5px;"></div>
+                                    <p>GLOBAL VENUES</p>
+                                    <p style="color: white;">HK, US, Canada, UK, Australia</p>
+                                    <div style="padding-top: 5px;"></div>
+                                </div>
+                                <div style="padding-right: 20vw;"></div><!--space gap-->
+                                <div>
+                                    <div style="padding-bottom: 5px;"></div>
+                                    <p>HIGHLIGHT</p>
+                                    <p style="color: pink;">16 Nights at HK Coliseum</p>
+                                    <div style="padding-top: 5px;"></div>
+                                </div>
+                                <div style="padding-right: 0.7vw;"></div>
+                            </div>
+                            <div style="padding-bottom: 20px;padding-left: 1vw;"></div>
+                            
+                        </div>
+                        <div style="padding-left: 1vw;"></div>
+                    </div>
+                </div>
+                <div style="padding-left: 1vw;"></div>
+            </div>
+            <div style="padding-bottom: 1vh;flex-direction: row;"></div>
+            
+        </div><!--concerts-->
+
+
         <div></div><!--milestones--><!--引进上一版网页的scroller-->
 
     </main>
 
+    <!-- Description Modal Popup --> <!--used from old version of website-->
+    <div id="description-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="album-title">
+        <main class="description-page">
+            <h1 id="album-title">Album description</h1>
+            <p id="album-description" ">Add the full album description here.</p>
+            <div>
+                <button class="back-link" id="close-modal-btn" type="button">
+                    <svg class="w-4 h-4" style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    Back
+                </button>
+            </div>
+        </main>
+    </div>
+
 </body>
+</html>
